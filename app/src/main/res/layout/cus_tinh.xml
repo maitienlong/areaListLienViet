@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="CustomViewTinh"
+            type="com.example.beta3.viewmodel.ViewModelTinh" />
+
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="#0984e3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+       >
+
+        <TextView
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:text="DANH SÁCH XÃ/ PHƯỜNG/ THỊ TRẤN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listTinh"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+</layout>
