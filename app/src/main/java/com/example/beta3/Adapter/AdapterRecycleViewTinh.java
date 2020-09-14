@@ -1,4 +1,4 @@
-package com.example.beta3;
+package com.example.beta3.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.beta3.R;
 import com.example.beta3.models.ListArea;
 
 import java.util.ArrayList;
@@ -44,11 +45,11 @@ public class AdapterRecycleViewTinh extends RecyclerView.Adapter<AdapterRecycleV
         return areaArrayList.size();
     }
 
-//    public void filterList(ArrayList<Post> filtedList){
-//        areaArrayList = filtedList;
-//        notifyDataSetChanged();
-//
-//    }
+    public void filterList(ArrayList<ListArea> filtedList){
+        areaArrayList = filtedList;
+        notifyDataSetChanged();
+
+    }
 
     class ItemHolder extends RecyclerView.ViewHolder {
 

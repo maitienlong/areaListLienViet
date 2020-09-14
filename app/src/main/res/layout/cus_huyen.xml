@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="CustomViewHuyen"
+            type="com.example.beta3.viewmodel.ViewModelDistrict" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#0984e3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DANH SÁCH XÃ/ PHƯỜNG/ THỊ TRẤN"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtLiveData"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Tìm kiểm Tỉnh/ Thành phố"
+            app:addTextChangedListener="@{CustomViewHuyen.searchData()}" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete"
+            android:hint="Tìm kiểm Tỉnh/ Thành phố"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTinh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp" />
+
+
+    </LinearLayout>
+</layout>
